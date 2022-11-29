@@ -1,5 +1,5 @@
-{
-    "data" [
+const Users = {
+    "data": [
     {
     "id": 7,
     "email": "michael.lawson@reqres.in",
@@ -74,3 +74,33 @@
     }
     ]
     }
+
+    const crearObjetoHTMLUsers = (usuario) => {
+        const div = document.createElement('div');
+        const userId = document.createElement('h2');
+        const nombreUsuario = document.createElement('h3');
+        const tipoCuenta = document.createElement('h4');
+        const correo = document.createElement('p');
+        const descripcion = document.createElement('p')
+    }
+
+    const imprimirUsers = ( ) => {
+        const contenedor = document.getElementById ('mainContainer');
+
+        usuarios.data.forEach( (usuario) => {
+            const usuarioRepetir = crearObjetoHTMLUsers (usuario);
+            contenedor.apprendChild (usuarioRepetir);
+        })
+    }
+
+    userId.textContent = usuario.id; 
+    nombreUsuario.textContent = '${usuario.first_name} ${usuario.last_name}';
+    tipoCuenta.textContent = usuario.userAccount;
+    correo.textContent = usuario.email;
+    descripcion.textContent = usuario.descripcion;
+
+    div.append(userId, nombreUsuario, tipoCuenta, correo, descripcion);
+
+    return div;
+
+    imprimirUsers();
